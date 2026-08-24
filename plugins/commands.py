@@ -159,7 +159,8 @@ async def start(client, message):
             InlineKeyboardButton('ᴜᴘɢʀᴀᴅᴇ 🎟', callback_data="premium_info", style=enums.ButtonStyle.DANGER, icon_custom_emoji_id="6312235408260341744")
         ],[
             InlineKeyboardButton(' DMCA Notice ', url=f'http://t.me/{temp.U_NAME}/dmca', style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="5397976749436842796")
-        ]]            reply_markup = InlineKeyboardMarkup(buttons)
+        ]] 
+            reply_markup = InlineKeyboardMarkup(buttons)
             current_time = datetime.now(pytz.timezone(TIMEZONE))
             curr_time = current_time.hour        
             if curr_time < 12:
