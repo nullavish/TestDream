@@ -1168,7 +1168,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":
         buttons = [[
-                    InlineKeyboardButton('🔰 ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🔰', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true',style=enums.ButtonStyle.PRIMARY)
+                    InlineKeyboardButton('🔰 ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🔰', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true', style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="6312199974780151772")
                 ],[
                     InlineKeyboardButton(' ʜᴇʟᴘ 📢', callback_data='help', style=enums.ButtonStyle.SUCCESS),
                     InlineKeyboardButton(' ᴀʙᴏᴜᴛ 📖', callback_data='about')
