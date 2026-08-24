@@ -1,15 +1,18 @@
 class script(object):
-    START_TXT = """<b>Hey {}, {}</b>
-    
-<b>🎬 Welcome to Telegram No 1 Movies Webseries OTT Search Engine </b><tg-emoji emoji-id="5372923951796198347">🥂</tg-emoji>
-<b>✦  POWERFUL AUTO-FILTER BOT </b><tg-emoji emoji-id="6311808059014390849">⚡️</tg-emoji>
-<tg-emoji emoji-id="6321102372537901658">🍿</tg-emoji><b> ✦ I can provide all movies and web series 🎬</b>
-<tg-emoji emoji-id="6032850693348399258">🔎</tg-emoji><b> ✦ Just send the Google spelling</b>
-<tg-emoji emoji-id="6242049290387069985">🇮🇳</tg-emoji><b> ✦ If you want to watch any movie/webseries in English, just send its name</b>
-<b>•─────•─────────•─────•</b>
-<b>🇮🇳 If you see ads below the bot's name, please click on them.</b>
-<b>Click on the bots banner below the name of the bot.</b>
-<b>•─────•─────────•─────•</b>"""
+    START_TXT = """<b>Hey {}, {}</b> <tg-emoji emoji-id="6321173922398084063">⭐</tg-emoji>
+<b>Welcome to </b><tg-emoji emoji-id="5866355487255039002">🚀</tg-emoji><b> No 1 Movies Webseries OTT Search Engine</b><tg-emoji emoji-id="6323306309236038626">🍿</tg-emoji><tg-emoji emoji-id="6321320290588565035">🤖</tg-emoji>
+
+<tg-emoji emoji-id="6321325964240362008">❗️</tg-emoji><b>ᴘᴏᴡᴇʀғᴜʟ ᴀᴜᴛᴏ-ғɪʟᴛᴇʀ ʙᴏᴛ</b>
+<tg-emoji emoji-id="6321325964240362008">❗️</tg-emoji><b>ɪ ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ᴀʟʟ ᴍᴏᴠɪᴇs ᴀɴᴅ ᴡᴇʙ sᴇʀɪᴇs</b>
+
+<tg-emoji emoji-id="5258396243666681152">🔎</tg-emoji><i>Just send correct Spelling</i><tg-emoji emoji-id="5454370584861384827">🔍</tg-emoji>
+
+<tg-emoji emoji-id="6321228227964574392">ℹ️</tg-emoji> <b>Jo bhi Movie/Webseries dekhna ho uska naam ENGLISH me naam bheje </b><tg-emoji emoji-id="5371081166013078244">🍿</tg-emoji>
+
+<tg-emoji emoji-id="6321085085294534327">❤️</tg-emoji><b>जो भी मूवी/ वेबसरीज देखना हो english में उसका नाम भेजे</b>
+<tg-emoji emoji-id="6323322084650916948">🟩</tg-emoji><tg-emoji emoji-id="6323498813965213364">🟩</tg-emoji><tg-emoji emoji-id="6320925046223150523">🟩</tg-emoji><tg-emoji emoji-id="6320951799574436533">🟩</tg-emoji><tg-emoji emoji-id="6323445633680154253">🟩</tg-emoji><tg-emoji emoji-id="6321303986892708556">🟩</tg-emoji><tg-emoji emoji-id="6323535943957487433">🟩</tg-emoji><tg-emoji emoji-id="6323113439434644381">🟩</tg-emoji>
+<blockquote><tg-emoji emoji-id="6309872055261077639">🫙</tg-emoji> <b>If you see ads below the bot's name, please click👆</b><tg-emoji emoji-id="6311998609533443577">❌</tg-emoji> <b>to cancel</b></blockquote>
+<tg-emoji emoji-id="5208851133027596379">⬆️</tg-emoji><tg-emoji emoji-id="5208449291592413299">↗️</tg-emoji><tg-emoji emoji-id="5208705232988548657">↘️</tg-emoji><tg-emoji emoji-id="5208473059941431366">⬇️</tg-emoji><tg-emoji emoji-id="5208634091150258712">↙️</tg-emoji><tg-emoji emoji-id="5206382909811866989">⬅️</tg-emoji><tg-emoji emoji-id="5208571109749832230">↖️</tg-emoji><tg-emoji emoji-id="5206558651283684480">➡️</tg-emoji>"""
 
 
     GSTART_TXT = """<b>🚩 ᴊᴀɪ ꜱʜʀɪ ʀᴀᴍ 🚩</b>
