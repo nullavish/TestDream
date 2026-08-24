@@ -1,10 +1,15 @@
 class script(object):
-    START_TXT = """<b><u>🚩 ᴊᴀɪ ꜱʜʀɪ ʀᴀᴍ 🚩</u></b>
-
-<b>ʜᴇʏ {}, {}</b>
-
-<b>🤖 ɪ ᴀᴍ <a href=https://t.me/{}>{}</a>, ᴛʜᴇ ᴍᴏꜱᴛ ᴘᴏᴡᴇʀꜰᴜʟ ᴀᴜᴛᴏ ꜰɪʟᴛᴇʀ ʙᴏᴛ ᴡɪᴛʜ ᴘʀᴇᴍɪᴜᴍ ꜰᴇᴀᴛᴜʀᴇꜱ.</b>
-"""
+    START_TXT = """<b>Hey {}, {}</b>
+    
+<b>🎬 Welcome to Telegram No 1 Movies Webseries OTT Search Engine </b><tg-emoji emoji-id="5372923951796198347">🥂</tg-emoji>
+<b>✦  POWERFUL AUTO-FILTER BOT </b><tg-emoji emoji-id="6311808059014390849">⚡️</tg-emoji>
+<tg-emoji emoji-id="6321102372537901658">🍿</tg-emoji><b> ✦ I can provide all movies and web series 🎬</b>
+<tg-emoji emoji-id="6032850693348399258">🔎</tg-emoji><b> ✦ Just send the Google spelling</b>
+<tg-emoji emoji-id="6242049290387069985">🇮🇳</tg-emoji><b> ✦ If you want to watch any movie/webseries in English, just send its name</b>
+<b>•─────•─────────•─────•</b>
+<b>🇮🇳 If you see ads below the bot's name, please click on them.</b>
+<b>Click on the bots banner below the name of the bot.</b>
+<b>•─────•─────────•─────•</b>"""
 
 
     GSTART_TXT = """<b>🚩 ᴊᴀɪ ꜱʜʀɪ ʀᴀᴍ 🚩</b>
