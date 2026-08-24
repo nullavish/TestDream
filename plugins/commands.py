@@ -115,7 +115,6 @@ async def start(client, message):
             await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
         if len(message.command) != 2:
             buttons = [[
-        buttons = [[
             InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true', style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="6312199974780151772")
         ],[
             InlineKeyboardButton(' ʜᴇʟᴘ', callback_data='help', style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="5397976749436842796"),
