@@ -150,7 +150,6 @@ async def start(client, message):
 
         if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
             buttons = [[
-        buttons = [[
             InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true', style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="6312199974780151772")
         ],[
             InlineKeyboardButton(' ʜᴇʟᴘ', callback_data='help', style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="5397976749436842796"),
