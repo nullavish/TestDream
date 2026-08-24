@@ -46,8 +46,8 @@ FSUB_PICS = (environ.get('FSUB_PICS', 'https://graph.org/file/7478ff3eac37f4329c
 # ============================
 # Admin, Channels & Users Configuration
 # ============================
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '634637418').split()] # Replace with the actual admin ID(s) to add
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-100').split()]  # Channel id for auto indexing (make sure bot is admin)
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6072084083 7982460158 7031784038 5725179405').split()] # Replace with the actual admin ID(s) to add
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002617382312 -1001867750893 -1003738858631').split()]  # Channel id for auto indexing (make sure bot is admin)
 
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002339199841'))  # Log channel id (make sure bot is admin)
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1002977144105'))  # Bin channel id (make sure bot is admin)
@@ -125,9 +125,9 @@ THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "44000"))
 # ============================
 # Channel & Group Links Configuration
 # ============================
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/dreamxbotz') # Group link for the bot
-OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/dreamxbotz') # Owner link for the bot
-UPDATE_CHNL_LNK = environ.get('UPDATE_CHNL_LNK', 'https://t.me/dreamxbotz') # Update channel link for the bot
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/iPopkornMovies_Group') # Group link for the bot
+OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/Chat2ownerbot') # Owner link for the bot
+UPDATE_CHNL_LNK = environ.get('UPDATE_CHNL_LNK', 'https://t.me/iPopcornbotNews') # Update channel link for the bot
 
 # ============================
 # User Configuration
@@ -139,7 +139,7 @@ PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in envir
 # ============================
 # Miscellaneous Configuration
 # ============================
-ULTRA_FAST_MODE = is_enabled(environ.get('ULTRA_FAST_MODE', "False"), True) # Set to True for fast search, False for original search
+ULTRA_FAST_MODE = is_enabled(environ.get('ULTRA_FAST_MODE', "True"), True) # Set to True for fast search, False for original search
 
 MAX_B_TN = environ.get("MAX_B_TN", "5") # Maximum number of buttons in a row (default: 5)
 PORT = int(environ.get("PORT", "8080"))  # Port for the web server (default: 8080)
@@ -164,7 +164,7 @@ PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False) #
 PM_SEARCH = is_enabled(environ.get('PM_SEARCH', "True"), True)  # PM Search On (True) / Off (False)
 EMOJI_MODE = is_enabled(environ.get('EMOJI_MODE', "True"), True)  # Emoji status On (True) / Off (False)
 BUTTON_MODE = is_enabled((environ.get('BUTTON_MODE', "False")), False) # pm & Group button or link mode (True) / Off (False)
-STREAM_MODE = is_enabled(environ.get('STREAM_MODE', "True"), True) # Set Stream mode True or False
+STREAM_MODE = is_enabled(environ.get('STREAM_MODE', "False"), True) # Set Stream mode True or False
 PREMIUM_STREAM_MODE = is_enabled(environ.get('PREMIUM_STREAM_MODE', "False"), False) # Set Stream mode True or False only for premium users
 MAINTENANCE = is_enabled(environ.get('MAINTENANCE', "False"), False)
 
