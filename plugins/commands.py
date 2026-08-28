@@ -82,7 +82,7 @@ async def start(client, message):
                 verifiedfiles = f"https://telegram.me/{temp.U_NAME}?start=file_{grp_id}_{file_id}"
             await client.send_message(settings['log'], script.VERIFIED_LOG_TEXT.format(m.from_user.mention, user_id, datetime.now(pytz.timezone('Asia/Kolkata')).strftime('%d %B %Y'), num))
             btn = [[
-                InlineKeyboardButton("✅ ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ɢᴇᴛ ꜰɪʟᴇ ✅", url=verifiedfiles),
+                InlineKeyboardButton("✅ ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ɢᴇᴛ ꜰɪʟᴇ ✅", url=verifiedfiles, style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="6086950019804439154"),
             ]]
             reply_markup=InlineKeyboardMarkup(btn)
             dlt=await m.reply_photo(
@@ -97,9 +97,9 @@ async def start(client, message):
             return         
         if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
             buttons = [[
-                        InlineKeyboardButton('❤️ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ❤️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                        InlineKeyboardButton('❤️ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ❤️', url=f'http://t.me/{temp.U_NAME}?startgroup=true', style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="6086888571707339638")
                     ],[
-                        InlineKeyboardButton('🍁 Update Channel 🍁', url=UPDATE_CHNL_LNK)
+                        InlineKeyboardButton('🍁 Update Channel 🍁', url=UPDATE_CHNL_LNK, style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="5399967660052081305")
                       ]]
             reply_markup = InlineKeyboardMarkup(buttons)
             await message.reply(script.GSTART_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
@@ -115,12 +115,12 @@ async def start(client, message):
             await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
         if len(message.command) != 2:
             buttons = [[
-            InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true', style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="6312199974780151772")
+            InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true', style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="6093688694642844235")
         ],[
-            InlineKeyboardButton(' ʜᴇʟᴘ', callback_data='help', style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="5397976749436842796"),
-            InlineKeyboardButton(' ᴀʙᴏᴜᴛ', callback_data='about', style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="6309872055261077639")
+            InlineKeyboardButton(' ʜᴇʟᴘ', callback_data='help', style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="5247176827016847212"),
+            InlineKeyboardButton(' ᴀʙᴏᴜᴛ', callback_data='about', style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="5258474669769497337")
         ],[
-            InlineKeyboardButton('ᴛᴏᴘ sᴇᴀʀᴄʜɪɴɢ ⭐', callback_data="topsearch", style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="6312052073286343219"),
+            InlineKeyboardButton('ᴛᴏᴘ sᴇᴀʀᴄʜɪɴɢ ⭐', callback_data="topsearch", style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="5258419835922030550"),
             InlineKeyboardButton('ᴜᴘɢʀᴀᴅᴇ 🎟', callback_data="premium_info", style=enums.ButtonStyle.DANGER, icon_custom_emoji_id="6312235408260341744")
         ],[
             InlineKeyboardButton(' DMCA Notice ', url=f'http://t.me/{temp.U_NAME}/dmca', style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="5397976749436842796")
@@ -150,12 +150,12 @@ async def start(client, message):
 
         if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
             buttons = [[
-            InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true', style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="6312199974780151772")
+            InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true', style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="6093688694642844235")
         ],[
-            InlineKeyboardButton(' ʜᴇʟᴘ', callback_data='help', style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="5397976749436842796"),
-            InlineKeyboardButton(' ᴀʙᴏᴜᴛ', callback_data='about', style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="6309872055261077639")
+            InlineKeyboardButton(' ʜᴇʟᴘ', callback_data='help', style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="5247176827016847212"),
+            InlineKeyboardButton(' ᴀʙᴏᴜᴛ', callback_data='about', style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="5258474669769497337")
         ],[
-            InlineKeyboardButton('ᴛᴏᴘ sᴇᴀʀᴄʜɪɴɢ ⭐', callback_data="topsearch", style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="6312052073286343219"),
+            InlineKeyboardButton('ᴛᴏᴘ sᴇᴀʀᴄʜɪɴɢ ⭐', callback_data="topsearch", style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="5258419835922030550"),
             InlineKeyboardButton('ᴜᴘɢʀᴀᴅᴇ 🎟', callback_data="premium_info", style=enums.ButtonStyle.DANGER, icon_custom_emoji_id="6312235408260341744")
         ],[
             InlineKeyboardButton(' DMCA Notice ', url=f'http://t.me/{temp.U_NAME}/dmca', style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="5397976749436842796")
@@ -227,11 +227,11 @@ async def start(client, message):
 
         if len(message.command) == 2 and message.command[1] in ["premium"]:
             buttons = [[
-                        InlineKeyboardButton('📲 ꜱᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ', url=OWNER_LNK)
+                        InlineKeyboardButton('📲 ꜱᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ', url=OWNER_LNK, style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="6089401595726932200")
                       ],[
-                        InlineKeyboardButton('UPI ID Copy Karein ??', copy_text=OWNER_UPI_ID, style=enums.ButtonStyle.PRIMARY)
+                        InlineKeyboardButton('UPI ID Copy Karein ??', copy_text=OWNER_UPI_ID, style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="6086870678873580451")
                       ],[
-                        InlineKeyboardButton('❌ ᴄʟᴏꜱᴇ ❌', callback_data='close_data', style=enums.ButtonStyle.DANGER)
+                        InlineKeyboardButton('❌ ᴄʟᴏꜱᴇ ❌', callback_data='close_data', style=enums.ButtonStyle.DANGER, icon_custom_emoji_id="6087068908794160618")
                       ]]
             reply_markup = InlineKeyboardMarkup(buttons)
             await message.reply_photo(
@@ -275,7 +275,7 @@ async def start(client, message):
                     if len(message.command) > 1 and "_" in message.command[1]:
                         kk, file_id = message.command[1].split("_", 1)
                         btn.append([
-                            InlineKeyboardButton("♻️ ᴛʀʏ ᴀɢᴀɪɴ ♻️", callback_data=f"checksub#{kk}#{file_id}")
+                            InlineKeyboardButton("♻️ ᴛʀʏ ᴀɢᴀɪɴ ♻️", callback_data=f"checksub#{kk}#{file_id}", style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="5030872266716480568")
                         ])
                         reply_markup = InlineKeyboardMarkup(btn)
                     photo = random.choice(FSUB_PICS) if FSUB_PICS else "https://graph.org/file/7478ff3eac37f4329c3d8.jpg"
@@ -314,9 +314,9 @@ async def start(client, message):
                     else:
                         howtodownload = settings.get('tutorial_2', TUTORIAL_2) if is_second_shortener else settings.get('tutorial', TUTORIAL)
                     buttons = [[
-                        InlineKeyboardButton(text="♻️ ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪꜰʏ ♻️", url=verify)
+                        InlineKeyboardButton(text="♻️ ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪꜰʏ ♻️", url=verify, style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="5019759554234156094")
                     ],[
-                        InlineKeyboardButton(text="⁉️ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪꜰʏ ⁉️", url=howtodownload)
+                        InlineKeyboardButton(text="⁉️ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪꜰʏ ⁉️", url=howtodownload, style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="5397976749436842796")
                     ]]
                     reply_markup=InlineKeyboardMarkup(buttons)
                     if await db.user_verified(user_id): 
@@ -486,25 +486,25 @@ async def start(client, message):
 async def stream_buttons(user_id: int, file_id: str):
     if STREAM_MODE and not PREMIUM_STREAM_MODE:
         return [
-            [InlineKeyboardButton('🚀 ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ / ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', callback_data=f'generate_stream_link:{file_id}')],
-            [InlineKeyboardButton('ℹ️ ᴠɪᴇᴡ ᴀᴜᴅɪᴏ & ꜱᴜʙꜱ ɪɴꜰᴏ ℹ️', callback_data=f'extract_data:{file_id}')],
-            [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=UPDATE_CHNL_LNK)]
+            [InlineKeyboardButton('🚀 ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ / ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', callback_data=f'generate_stream_link:{file_id}', style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="6086911549782368344")],
+            [InlineKeyboardButton('ℹ️ ᴠɪᴇᴡ ᴀᴜᴅɪᴏ & ꜱᴜʙꜱ ɪɴꜰᴏ ℹ️', callback_data=f'extract_data:{file_id}', style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="6309733018579772919")],
+            [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=UPDATE_CHNL_LNK, style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="6086903462358950536")]
         ]
     elif STREAM_MODE and PREMIUM_STREAM_MODE:
         if not await db.has_premium_access(user_id):
             return [
-                [InlineKeyboardButton('🚀 ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ / ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', callback_data='prestream')],
-                [InlineKeyboardButton('ℹ️ ᴠɪᴇᴡ ᴀᴜᴅɪᴏ & ꜱᴜʙꜱ ɪɴꜰᴏ ℹ️', callback_data='prestream')],
-                [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=UPDATE_CHNL_LNK)]
+                [InlineKeyboardButton('🚀 ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ / ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', callback_data='prestream', style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="6086911549782368344")],
+                [InlineKeyboardButton('ℹ️ ᴠɪᴇᴡ ᴀᴜᴅɪᴏ & ꜱᴜʙꜱ ɪɴꜰᴏ ℹ️', callback_data='prestream', style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="6309733018579772919")],
+                [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=UPDATE_CHNL_LNK, style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="6086903462358950536")]
             ]
         else:
             return [
-                [InlineKeyboardButton('🚀 ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ / ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', callback_data=f'generate_stream_link:{file_id}')],
-                [InlineKeyboardButton('ℹ️ ᴠɪᴇᴡ ᴀᴜᴅɪᴏ & ꜱᴜʙꜱ ɪɴꜰᴏ ℹ️', callback_data=f'extract_data:{file_id}')],
-                [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=UPDATE_CHNL_LNK)]
+                [InlineKeyboardButton('🚀 ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ / ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', callback_data=f'generate_stream_link:{file_id}', style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="6086911549782368344")],
+                [InlineKeyboardButton('ℹ️ ᴠɪᴇᴡ ᴀᴜᴅɪᴏ & ꜱᴜʙꜱ ɪɴꜰᴏ ℹ️', callback_data=f'extract_data:{file_id}', style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="6309733018579772919")],
+                [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=UPDATE_CHNL_LNK, style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="6086903462358950536")]
             ]
     else:
-        return [[InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=UPDATE_CHNL_LNK)]]
+        return [[InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=UPDATE_CHNL_LNK, style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="6086903462358950536")]]
     
 @Client.on_message(filters.command('logs') & filters.user(ADMINS))
 async def log_file(bot, message):
@@ -624,12 +624,12 @@ async def delete_all_index(bot, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="⚠️ ʏᴇꜱ ⚠️", callback_data="autofilter_delete", style=enums.ButtonStyle.DANGER
+                        text="⚠️ ʏᴇꜱ ⚠️", callback_data="autofilter_delete", style=enums.ButtonStyle.DANGER, icon_custom_emoji_id="5382026293166489702"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        text="❌ ɴᴏ ❌", callback_data="close_data"
+                        text="❌ ɴᴏ ❌", callback_data="close_data", style=enums.ButtonStyle.DANGER, icon_custom_emoji_id="6088947806662303266"
                     )
                 ],
             ]
@@ -649,9 +649,9 @@ async def settings(client, message):
             return await message.reply_text(script.NT_ADMIN_ALRT_TXT)
         await db.connect_group(grp_id, user_id)
         btn = [[
-                InlineKeyboardButton("👤 ᴏᴘᴇɴ ɪɴ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ 👤", callback_data=f"opnsetpm#{grp_id}")
+                InlineKeyboardButton("👤 ᴏᴘᴇɴ ɪɴ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ 👤", callback_data=f"opnsetpm#{grp_id}", style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="6312172542824030517")
               ],[
-                InlineKeyboardButton("👥 ᴏᴘᴇɴ ʜᴇʀᴇ 👥", callback_data=f"opnsetgrp#{grp_id}")
+                InlineKeyboardButton("👥 ᴏᴘᴇɴ ʜᴇʀᴇ 👥", callback_data=f"opnsetgrp#{grp_id}", style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="6309733250508006891")
               ]]
         await message.reply_text(
                 text="<b>ᴡʜᴇʀᴇ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴏᴘᴇɴ ꜱᴇᴛᴛɪɴɢꜱ ᴍᴇɴᴜ ? ⚙️</b>",
@@ -668,7 +668,7 @@ async def settings(client, message):
         for group in connected_groups:
             try:
                 Chat = await client.get_chat(group)
-                group_list.append([ InlineKeyboardButton(text=Chat.title, callback_data=f"grp_pm#{Chat.id}") ])
+                group_list.append([ InlineKeyboardButton(text=Chat.title, callback_data=f"grp_pm#{Chat.id}", style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="6086888571707339638") ])
             except Exception:
                 pass
         await message.reply_text(
@@ -711,7 +711,7 @@ async def save_template(client, message):
 
     group_id = message.chat.id
     title = message.chat.title
-    if not await is_check_admin(client, group_id, user_id):
+    if not await is_check_admin(client, grp_id, user_id):
         await message.reply_text(script.NT_ADMIN_ALRT_TXT)
         return
     if len(message.command) < 2:
@@ -751,8 +751,8 @@ async def requests(bot, message):
     reported_post: Message | None = None
     try:
         btn = [[
-            InlineKeyboardButton('ᴠɪᴇᴡ ʀᴇǫᴜᴇꜱᴛ', url=msg_link),
-            InlineKeyboardButton('ꜱʜᴏᴡ ᴏᴘᴛɪᴏɴꜱ', callback_data=f'show_option#{reporter}')
+            InlineKeyboardButton('ᴠɪᴇᴡ ʀᴇǫᴜᴇꜱᴛ', url=msg_link, style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="6087071455709766051"),
+            InlineKeyboardButton('ꜱʜᴏᴡ ᴏᴘᴛɪᴏɴꜱ', callback_data=f'show_option#{reporter}', style=enums.ButtonStyle.PRIMARY, icon_custom_emoji_id="6086687528583176680")
         ]]
         req_text = f"<b>📝 ʀᴇǫᴜᴇꜱᴛ : <u>{content}</u>\n\n📚 ʀᴇᴘᴏʀᴛᴇᴅ ʙʏ : {mention}\n📖 ʀᴇᴘᴏʀᴛᴇʀ ɪᴅ : {reporter}\n\n</b>"
         warning_text = "<b>⚠️ ʀᴇǫᴜᴇꜱᴛ ᴄʜᴀɴɴᴇʟ ɪꜱ ɴᴏᴛ ꜱᴇᴛ.</b>"
@@ -784,8 +784,8 @@ async def requests(bot, message):
                     invite_link = None
             if invite_link:
                 btn = [[
-                    InlineKeyboardButton('ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ', url=invite_link),
-                    InlineKeyboardButton('ᴠɪᴇᴡ ʀᴇǫᴜᴇꜱᴛ', url=reported_post.link)
+                    InlineKeyboardButton('ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ', url=invite_link, style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="5256143829672672750"),
+                    InlineKeyboardButton('ᴠɪᴇᴡ ʀᴇǫᴜᴇꜱᴛ', url=reported_post.link, style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="6087071455709766051")
                 ]]
                 await message.reply_text("<b>ʏᴏᴜʀ ʀᴇǫᴜᴇꜱᴛ ʜᴀꜱ ʙᴇᴇɴ ᴀᴅᴅᴇᴅ! ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ꜰᴏʀ ꜱᴏᴍᴇ ᴛɪᴍᴇ.\n\nᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ꜰɪʀꜱᴛ & ᴠɪᴇᴡ ʀᴇǫᴜᴇꜱᴛ.</b>", reply_markup=InlineKeyboardMarkup(btn))
             else:
@@ -840,9 +840,9 @@ async def deletemultiplefiles(bot, message):
         return
     await k.delete()
     btn = [[
-       InlineKeyboardButton("⚠️ Yes, Continue ! ⚠️", callback_data=f"killfilesdq#{keyword}")
+       InlineKeyboardButton("⚠️ Yes, Continue ! ⚠️", callback_data=f"killfilesdq#{keyword}", style=enums.ButtonStyle.SUCCESS, icon_custom_emoji_id="5255813559572508065")
        ],[
-       InlineKeyboardButton("❌ No, Abort operation ! ❌", callback_data="close_data", style=enums.ButtonStyle.DANGER)
+       InlineKeyboardButton("❌ No, Abort operation ! ❌", callback_data="close_data", style=enums.ButtonStyle.DANGER, icon_custom_emoji_id="5258362429389152256")
     ]]
     await message.reply_text(
         text=f"<b>Found {total} files for your query {keyword} !\n\nDo you want to delete?</b>",
@@ -1006,8 +1006,8 @@ async def stop_button(bot, message):
 @Client.on_message(filters.command("del_msg") & filters.user(ADMINS))
 async def del_msg(client, message):
     confirm_markup = InlineKeyboardMarkup([[
-        InlineKeyboardButton("Yes", callback_data="confirm_del_yes"),
-        InlineKeyboardButton("No", callback_data="confirm_del_no")
+        InlineKeyboardButton("Yes", callback_data="confirm_del_yes", icon_custom_emoji_id="6087068908794160618"),
+        InlineKeyboardButton("No", callback_data="confirm_del_no", icon_custom_emoji_id="6088947806662303266")
     ]])
     sent_message = await message.reply_text(
         "⚠️ Aʀᴇ ʏᴏᴜ sᴜʀᴇ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴄʟᴇᴀʀ ᴛʜᴇ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ʟɪsᴛ ?\n\n ᴅᴏ ʏᴏᴜ ꜱᴛɪʟʟ ᴡᴀɴᴛ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ ?",
@@ -1231,8 +1231,8 @@ async def all_settings(client, message):
         return await message.reply_text(f"<b>⚠️ ᴇʀʀᴏʀ ꜰᴇᴛᴄʜɪɴɢ ꜱᴇᴛᴛɪɴɢꜱ:</b>\n<code>{e}</code>")
     text = generate_settings_text(settings, title)
     btn = [
-        [InlineKeyboardButton("♻️ ʀᴇꜱᴇᴛ ꜱᴇᴛᴛɪɴɢꜱ", callback_data=f"reset_group_{grp_id}")],
-        [InlineKeyboardButton("🚫 ᴄʟᴏꜱᴇ", callback_data="close_data", style=enums.ButtonStyle.DANGER)]
+        [InlineKeyboardButton("♻️ ʀᴇꜱᴇᴛ ꜱᴇᴛᴛɪɴɢꜱ", callback_data=f"reset_group_{grp_id}", style=enums.ButtonStyle.DANGER, icon_custom_emoji_id="6309777256742920105")],
+        [InlineKeyboardButton("🚫 ᴄʟᴏꜱᴇ", callback_data="close_data", style=enums.ButtonStyle.DANGER, icon_custom_emoji_id="6086898523146560424")]
     ]
     dlt = await message.reply_text(text, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
     await asyncio.sleep(300)
@@ -1275,8 +1275,8 @@ async def reset_group_callback(client, callback_query):
     title = callback_query.message.chat.title
     text = generate_settings_text(updated, title, reset_done=True)
     buttons = [
-        [InlineKeyboardButton("♻️ ʀᴇꜱᴇᴛ ꜱᴇᴛᴛɪɴɢꜱ", callback_data=f"reset_group_{grp_id}")],
-        [InlineKeyboardButton("🚫 ᴄʟᴏꜱᴇ", callback_data="close_data", style=enums.ButtonStyle.DANGER)]
+        [InlineKeyboardButton("♻️ ʀᴇꜱᴇᴛ ꜱᴇᴛᴛɪɴɢꜱ", callback_data=f"reset_group_{grp_id}", style=enums.ButtonStyle.DANGER, icon_custom_emoji_id="6309777256742920105")],
+        [InlineKeyboardButton("🚫 ᴄʟᴏꜱᴇ", callback_data="close_data", style=enums.ButtonStyle.DANGER, icon_custom_emoji_id="6086898523146560424")]
     ]
     await callback_query.message.edit_text(text, reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
