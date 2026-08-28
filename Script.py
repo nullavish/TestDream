@@ -449,8 +449,7 @@ This Is An Open-Source Project. You Can Use It Freely, But Selling The Source Co
 <blockquote>ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴛᴀᴋᴇ ᴘʀᴇᴍɪᴜᴍ sᴇʀᴠɪᴄᴇ (ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴠᴇʀɪꜰʏ)<tg-emoji emoji-id="5251203410396458957">🛡</tg-emoji>
 अगर आपको डायरेक्ट फाइल्स चाहिए तो आप प्रीमियम सेवा ले सकते हैं (सत्यापन की आवश्यकता नहीं)<tg-emoji emoji-id="5251203410396458957">🛡</tg-emoji></blockquote>
 
-<b><tg-emoji emoji-id="6309670561165352554">📹</tg-emoji> Watch tutorials / ट्यूटोरियल देखें <tg-emoji emoji-id="6088947806662303266">🚫</tg-emoji></b>
-"""
+<b><tg-emoji emoji-id="6309670561165352554">📹</tg-emoji> Watch tutorials / ट्यूटोरियल देखें <tg-emoji emoji-id="6088947806662303266">🚫</tg-emoji></b>"""
 
     SECOND_VERIFY_COMPLETE_TEXT = """<b><i>👋 ʜᴇʏ {},
     
@@ -468,8 +467,7 @@ This Is An Open-Source Project. You Can Use It Freely, But Selling The Source Co
 <blockquote>ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴛᴀᴋᴇ ᴘʀᴇᴍɪᴜᴍ sᴇʀᴠɪᴄᴇ (ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴠᴇʀɪꜰʏ)<tg-emoji emoji-id="5251203410396458957">🛡</tg-emoji>
 अगर आपको डायरेक्ट फाइल्स चाहिए तो आप प्रीमियम सेवा ले सकते हैं (सत्यापन की आवश्यकता नहीं)<tg-emoji emoji-id="5251203410396458957">🛡</tg-emoji></blockquote>
 
-<b><tg-emoji emoji-id="6309670561165352554">📹</tg-emoji> Watch tutorials / ट्यूटोरियल देखें <tg-emoji emoji-id="6088947806662303266">🚫</tg-emoji></b>
-"""
+<b><tg-emoji emoji-id="6309670561165352554">📹</tg-emoji> Watch tutorials / ट्यूटोरियल देखें <tg-emoji emoji-id="6088947806662303266">🚫</tg-emoji></b>"""
 
     THIRDT_VERIFY_COMPLETE_TEXT= """<b><i>👋 ʜᴇʏ {},
     
